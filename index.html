@@ -2,36 +2,37 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SupabaseFinance</title>
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Sweet Alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SupabaseFinance</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.min.css">
 </head>
 
 <body class="bg-green-200 min-h-screen flex flex-col items-center justify-center">
-<!-- logo -->
- <div class="mb-8">
-    <img src="images/money.webp" alt="Logo do Finance" class="w-40" />
- </div>
- <!-- form -->
+  <!-- logo -->
+  <div class="mb-8">
+    <img src="images/logo.png" alt="Logo do Finance" class="w-40" />
+  </div>
+  <!-- form -->
   <div class="bg-white p-6 rounded shadow w-80">
     <div class="flex justify-center mb-8">
-    <img src="images/login.svg" alt="Login" class="h-32">
-</div>
-      <h1 class="text-xl mb-4 text-green-800">Área Reservada</h1>
-      <input id="email" type="email" placeholder="Informe o seu Email" 
-      title="Digite o seu email do sistema" autofocus
-      class="border p-2 w-full mb-2"/>
-      <input id="password" type="password" placeholder="Senha do Sistema"
-      title="Informe a sua senha"
-      class="border p-2 w-full mb-2"/>
-      <button id="btnLogin" class="bg-blue-500 text-white px-4 py-2 mt-4 w-full">Entrar</button>
-      <a href="novoUsuario.html" class="block text-center mt-2 text-sm text-green-600 font-medium">Criar novo usuário</a>
+      <img src="images/login.svg" alt="Login" class="h-32">
+    </div>
+    <h1 class="text-xl mb-4 text-green-800">Área Reservada</h1>
+    <form id="formLogin">
+      <input id="email" type="email" placeholder="Informe o seu Email" title="Digite o seu email do sistema" autofocus
+        class="border p-2 w-full mb-2" />
+      <input id="password" type="password" placeholder="Senha do Sistema" title="Informe a sua senha"
+        class="border p-2 w-full mb-2" />
+      <button id="btnLogin" type="submit" class="bg-blue-500 text-white px-4 py-2 mt-4 w-full">Entrar</button>
+    </form>
+    <a href="novoUsuario.html" class="block text-center mt-2 text-sm text-green-600 font-medium">Criar novo usuário</a>
   </div>
 </body>
+<script src="js/mainLogin.js" type="module"></script>
 
 </html>
