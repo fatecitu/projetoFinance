@@ -19,3 +19,15 @@ export async function login(email, password) {
     }
 }
 
+export async function verificaAutenticacao(){
+    const token = localStorage.getItem('sb_token')
+    //Tem o token?
+    if(!token){
+        window.location.href='index.html'
+        return false
+    }
+}
+export function logout(){
+    localStorage.removeItem('sb_token')
+    window.location.href='index.html' 
+}

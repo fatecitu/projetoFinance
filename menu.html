@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - SupabaseFinance</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.min.css">
+</head>
+
+<body class="bg-green-100 h-screen flex flex-col">
+  <header class="bg-green-600 text-white p-4 flex items-center justify-between">
+    <img src="images/logo.png" alt="Logo do Finance" class="h-16"/>
+  <h1 class="text-xl font-bold">Supabase Finance</h1> 
+  <div class="flex items-center">
+    <a href="lancamentos.html" class="mr-4 flex items-center">
+      Lançamentos
+    </a>
+    <a href="categorias.html" class="mr-4 flex items-center">
+      Categorias
+    </a>
+    <button id="btnLogout" class="bg-red-500 px-3 py-1 rounded">Logout</button>
+  </div>
+  </header>
+  <main class="flex flex-col items-center justify-center">
+    <img src="images/logo.png" alt="Logo do Finance" class="h-160"/>
+    <p class="text-xl text-green-900">Seja bem vindo ao sistema financeiro SupabaseFinance</p> 
+  </main>
+</body>
+<script src="js/mainMenu.js" type="module"></script>
+
+</html>

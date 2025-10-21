@@ -1,4 +1,4 @@
-import { login } from "../modules/auth.js";
+import { login, logout } from "../modules/auth.js";
 
 export function loginUi(){
     const form = document.getElementById('formLogin')
@@ -36,4 +36,8 @@ export function loginUi(){
              })
         }
     })
+}
+
+export function logoutUi(){
+    document.getElementById('btnLogout').addEventListener('click', logout)
 }
