@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorias - SupabaseFinance</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.min.css">
+</head>
+
+<body class="bg-green-100 h-screen flex flex-col">
+  <header class="bg-green-600 text-white p-4 flex items-center justify-between">
+    <img src="images/logo.png" alt="Logo do Finance" class="h-16"/>
+  <h1 class="text-xl font-bold">Supabase Finance</h1> 
+  <div class="flex items-center">
+    <a href="lancamentos.html" class="mr-4 flex items-center">
+      Lançamentos
+    </a>
+    <a href="menu.html" class="mr-4 flex items-center">
+      Menu
+    </a>
+    <button id="btnLogout" class="bg-red-500 px-3 py-1 rounded">Logout</button>
+  </div>
+  </header>
+  <main>
+    <table class="w-1/2 border bg-white shadow-lg mx-auto">
+       <caption class="text-2xl text-green-500 font-semibold my-4 caption-top">Listagem das Categorias</caption>
+       <thead>
+        <tr class="bg-gray-200">
+          <th class="border border-gray-400 p-2">Descrição</th>
+          <th class="border border-gray-400 p-2">Tipo</th>
+        </tr>
+       </thead>
+       <tbody id="tabelaCategorias">
+       </tbody>
+    </table>
+  </main>
+  
+</body>
+<script src="js/mainCategorias.js" type="module"></script>
+
+</html>
