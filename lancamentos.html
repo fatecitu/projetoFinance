@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lançamentos - SupabaseFinance</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.min.css">
+</head>
+
+<body class="bg-green-100 h-screen flex flex-col">
+  <header class="bg-green-600 text-white p-4 flex items-center justify-between">
+    <img src="images/logo.png" alt="Logo do Finance" class="h-16" />
+    <h1 class="text-xl font-bold">Supabase Finance</h1>
+    <div class="flex items-center">
+      <a href="categorias.html" class="mr-4 flex items-center">
+        Categorias
+      </a>
+      <a href="menu.html" class="mr-4 flex items-center">
+        Menu
+      </a>
+      <button id="btnLogout" class="bg-red-500 px-3 py-1 rounded">Logout</button>
+    </div>
+  </header>
+  <main class="flex-1 p-4">
+    <h2 class="text-lg font-semibold mb-4">Lançamentos Financeiros</h2>
+    <!-- criando 2 colunas -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- formulário -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-md text-green-700 font-semibold mb-4">Novo Lançamento</h3>
+        <form id="formLancamento" class="space-y-4">
+          <div><!-- cada div vai um conjunto label/input -->
+            <label for="descricao" class="block text-sm font-light text-gray-700">Descrição</label>
+            <input id="descricao" type="text" placeholder="Ex: Aluguel de Outubro" required
+              title="Informe a descrição do lançamento" class="border border-green-500 p-2 w-full mt-2 rounded-md">
+          </div>
+          <div>
+            <label for="categoria_id" class="block text-sm font-light text-gray-700">Categoria</label>
+            <select id="categoria_id" required class="border border-green-500 p-2 w-full mt-1 rounded-md">
+              <option value="" disabled selected>Selecione a categoria</option>
+            </select>
+          </div>
+          <div>
+            <label for="valor" class="block text-sm font-light text-gray-700">Valor</label>
+            <input id="valor" type="number" placeholder="0,00" required title="Informe o valor do lançamento"
+              class="border border-green-500 p-2 w-full mt-2 rounded-md">
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <label for="data_ocorrencia" class="block text-sm font-light text-gray-700">Data da Ocorrência</label>
+              <input id="data_ocorrencia" type="date" placeholder="dd/mm/aaaa" required
+                title="Informe a data que ocorreu o lançamento"
+                class="border border-green-500 p-2 w-full mt-2 rounded-md">
+            </div>
+            <div class="flex-1">
+              <label for="data_vencimento" class="block text-sm font-light text-gray-700">Data do Vencimento</label>
+              <input id="data_vencimento" type="date" placeholder="dd/mm/aaaa" required
+                title="Informe a data de vencimento do lançamento"
+                class="border border-green-500 p-2 w-full mt-2 rounded-md">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+<script src="js/mainLancamentos.js" type="module"></script>
+
+</html>

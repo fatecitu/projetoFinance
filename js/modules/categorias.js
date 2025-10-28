@@ -3,7 +3,7 @@ import { SUPABASE_URL, API_KEY } from "./config.js";
 //Buscar Lançamentos
 export async function buscarCategorias() {
     const token = localStorage.getItem('sb_token')
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/categorias?select=*`, {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/categorias?select=*&order=tipo.asc,descricao.asc`, {
         headers: {
             "apikey": API_KEY,
             "Authorization": `Bearer ${token}`

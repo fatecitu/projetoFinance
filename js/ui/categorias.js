@@ -7,6 +7,11 @@ export async function carregarCategorias(){
     dados.forEach(categoria => {
         //criamos a linha com tr
         const tr = document.createElement('tr')
+        const tipoClasse = categoria.tipo === 'receita'
+              ? 'bg-green-200'
+              : 'bg-red-200'
+        tr.className = tipoClasse
+
         tr.innerHTML = `
         <td class='border border-gray-400 p-2'>${categoria.descricao}</td>
         <td class='border border-gray-400 p-2'>${categoria.tipo}</td>`
