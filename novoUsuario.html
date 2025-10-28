@@ -15,7 +15,7 @@
 <body class="bg-green-200 min-h-screen flex flex-col items-center justify-center">
 <!-- logo -->
  <div class="mb-8">
-    <img src="images/money.webp" alt="Logo do Finance" class="w-40" />
+    <img src="images/logo.png" alt="Logo do Finance" class="w-40" />
  </div>
  <!-- form -->
   <div class="bg-white p-6 rounded shadow w-80">
@@ -23,15 +23,18 @@
         <img src="images/novoUsuario.svg" alt="Novo Usuário" class="h-32">
     </div>  
       <h1 class="text-xl mb-4 text-green-800">Novo Usuário</h1>
+      <form id="formSignup">
       <input id="email" type="email" placeholder="Informe o seu Email" 
       title="Digite o seu email do sistema" autofocus
       class="border p-2 w-full mb-2"/>
       <input id="password" type="password" placeholder="Senha do Sistema"
       title="Informe a sua senha"
       class="border p-2 w-full mb-2"/>
-      <button id="btnLogin" class="bg-green-500 text-white px-4 py-2 mt-4 w-full">Cadastrar</button>
+      <button id="btnLogin" type="submit" class="bg-green-500 text-white px-4 py-2 mt-4 w-full">Cadastrar</button>
       <a href="index.html" class="block text-center mt-2 text-sm text-blue-600 font-medium">Efetuar o Login</a>
-  </div>
+    </form>
+    </div>
+    <script src="js/mainSignup.js" type="module"></script>
 </body>
 
 </html>

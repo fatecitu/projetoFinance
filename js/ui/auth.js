@@ -1,4 +1,4 @@
-import { login, logout } from "../modules/auth.js";
+import { login, logout, signup } from "../modules/auth.js";
 
 export function loginUi(){
     const form = document.getElementById('formLogin')
@@ -40,4 +40,34 @@ export function loginUi(){
 
 export function logoutUi(){
     document.getElementById('btnLogout').addEventListener('click', logout)
+}
+
+export function signUpUi() {
+    const form = document.getElementById("formSignup");
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+e.preventDefault(); // impede o reload da página
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        try {
+            await signup(email, password);
+            await Swal.fire({
+                icon: 'success',
+                title: 'Usuário criado com sucesso!',
+                text: 'Redirecionando para a tela de login...',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            window.location.href = "index.html";
+        } catch (err) {
+            await Swal.fire({
+                icon: 'error',
+                title: 'Erro ao criar um novo Usuário',
+                text: err.message || 'Ocorreu um erro desconhecido ao tentar criar um novo usuário.',
+                confirmButtonText: 'Tentar Novamente',
+                timer: 4000
+            });
+        }
+    });
 }
