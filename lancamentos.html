@@ -21,10 +21,14 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
     <h1 class="text-xl font-bold">Supabase Finance</h1>
     <div class="flex items-center">
       <a href="categorias.html" class="mr-4 flex items-center">
-        Categorias
+        <span class="material-symbols-outlined">
+          category
+          </span>Categorias
       </a>
       <a href="menu.html" class="mr-4 flex items-center">
-        Menu
+        <span class="material-symbols-outlined">
+          menu
+          </span>Menu
       </a>
       <button id="btnLogout" class="bg-red-500 px-3 py-1 rounded">Logout</button>
     </div>
@@ -40,7 +44,8 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
           <div><!-- cada div vai um conjunto label/input -->
             <label for="descricao" class="block text-sm font-light text-gray-700">Descrição</label>
             <input id="descricao" type="text" placeholder="Ex: Aluguel de Outubro" required
-              title="Informe a descrição do lançamento" class="border border-green-500 p-2 w-full mt-2 rounded-md">
+            autofocus 
+            title="Informe a descrição do lançamento" class="border border-green-500 p-2 w-full mt-2 rounded-md">
           </div>
           <div>
             <label for="categoria_id" class="block text-sm font-light text-gray-700">Categoria</label>
@@ -51,7 +56,8 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
           <div>
             <label for="valor" class="block text-sm font-light text-gray-700">Valor</label>
             <input id="valor" type="number" placeholder="0,00" required title="Informe o valor do lançamento"
-              class="border border-green-500 p-2 w-full mt-2 rounded-md">
+            min = "0" step="0.01" 
+            class="border border-green-500 p-2 w-full mt-2 rounded-md">
           </div>
           <div class="flex gap-4">
             <div class="flex-1">
@@ -69,8 +75,11 @@ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wg
           </div>
           <!-- botões -->
            <div class="flex space-x-4">
-            <button type="submit" class="bg-green-500 hover:bg-purple-500 text-white px-4 py-2 w-full rounded-md">Salvar</button>
-            <button type="reset" class="bg-red-500 hover:bg-purple-500 text-white px-4 py-2 w-full rounded-md">Limpar</button>
+            <button type="submit" class="bg-green-500 hover:bg-purple-500 text-white px-4 py-2 w-full rounded-md flex items-center justify-center">
+              <span class="material-symbols-outlined">save</span> Salvar</button>
+            <button type="reset" class="bg-red-500 hover:bg-purple-500 text-white px-4 py-2 w-full rounded-md flex items-center justify-center"><span class="material-symbols-outlined">
+              cleaning_services
+              </span> Limpar</button>
            </div>
         </form>
       </div>

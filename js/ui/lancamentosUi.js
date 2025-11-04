@@ -61,7 +61,14 @@ export async function carregarLancamentos() {
         `;
         tbody.appendChild(tr);
     });
-
+    //Linha de total
+    const trTotal = document.createElement('tr')
+    trTotal.innerHTML = `<td colspan='5' 
+    class='text-right text-gray-700 p-4 border border-gray-400'> 
+    Total de Registros: </td>
+    <td class='text-left text-gray-700 p-4 border border-gray-400'>
+    ${dados.length}</td>`
+    tbody.appendChild(trTotal)
     // Listener para o botão Editar
     document.querySelectorAll(".btnEditar").forEach(btn => {
         btn.addEventListener("click", e => {
@@ -167,6 +174,8 @@ async function carregarLancamentoNoFormulario(id) {
     document.getElementById("data_ocorrencia").value = lancamento.data_ocorrencia;
     // Se data_vencimento for nulo, ele limpará o campo
     document.getElementById("data_vencimento").value = lancamento.data_vencimento ? lancamento.data_vencimento : '';
+   //adiciona o foco no campo descricao
+   document.getElementById('descricao').focus()
 }
 
 
@@ -174,4 +183,25 @@ function limparFormulario() {
     const form = document.getElementById("formLancamento")    
     delete form.dataset.id // Remove o ID do formulário       
     form.reset() //Limpa o form 
+}
+
+export function datasLancamentos(){
+    //obtém o dia e hoje
+    const hoje = new Date().toISOString().split("T")[0]    
+    //a data é retornada com o fuso horário, por isso removemos
+    //Referências aos campos do formulário
+   const dataOcorrencia = document.getElementById('data_ocorrencia')
+   const dataVencimento = document.getElementById('data_vencimento')
+   //define a data da ocorrencia como hoje
+   dataOcorrencia.value = hoje
+   dataVencimento.value = hoje
+   //define a maior data como hoje
+   dataOcorrencia.setAttribute('max', hoje)
+   //define a data mínima do vencimento
+   dataVencimento.setAttribute('min', dataOcorrencia.value)
+   //verifica se houve mudança na data da ocorrencia
+   dataOcorrencia.addEventListener('change', () => {
+    dataVencimento.value ='' //limpamos o vencimento
+    dataVencimento.setAttribute('min', dataOcorrencia.value)
+   })
 }
