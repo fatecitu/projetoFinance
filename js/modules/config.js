@@ -1,3 +1,3 @@
 //Configurações do Supabase
-export const SUPABASE_URL = "https://rjmwkoqbeaaehaumzcjj.supabase.co"
-export const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqbXdrb3FiZWFhZWhhdW16Y2pqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDAzMjYsImV4cCI6MjA3NTQxNjMyNn0.7WOu6MAKPbqnNLuFMSXm-a2KW8qulbqlh_JW7FqcRZE"
+export const SUPABASE_URL = "https://qzboiomcknozllwlzlwf.supabase.co"
+export const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6Ym9pb21ja25vemxsd2x6bHdmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkxNzI0NzksImV4cCI6MjA3NDc0ODQ3OX0.vksH6P_VuduSOzKp2rjTnONpF4GHBSaXTQoLCslzK_Y"
